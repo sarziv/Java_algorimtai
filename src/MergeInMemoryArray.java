@@ -1,5 +1,5 @@
 public class MergeInMemoryArray {
     public static void main(String[] args) {
-        system.out.println("Data");
+        System.out.println("Data");
     }
 }
