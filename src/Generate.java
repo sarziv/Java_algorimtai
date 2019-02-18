@@ -1,7 +1,6 @@
 //generate data double(0.1234) and text(4)
 // example 0.12345 GGAS
 
-import java.lang.reflect.Array;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Random;
