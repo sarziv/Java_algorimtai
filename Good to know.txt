@@ -1,0 +1,24 @@
+Summary ArrayList with ArrayDeque are preferable in much more use-cases than LinkedList. If you're not sure — just start with ArrayList.
+
+LinkedList and ArrayList are two different implementations of the List interface. LinkedList implements it with a doubly-linked list. ArrayList implements it with a dynamically re-sizing array.
+
+As with standard linked list and array operations, the various methods will have different algorithmic runtimes.
+
+For LinkedList<E>
+
+get(int index) is O(n) (with n/4 steps on average)
+add(E element) is O(1)
+add(int index, E element) is O(n) (with n/4 steps on average), but O(1) when index = 0 <--- main benefit of LinkedList<E>
+remove(int index) is O(n) (with n/4 steps on average)
+Iterator.remove() is O(1). <--- main benefit of LinkedList<E>
+ListIterator.add(E element) is O(1) This is one of the main benefits of LinkedList<E>
+Note: Many of the operations need n/4 steps on average, constant number of steps in the best case (e.g. index = 0), and n/2 steps in worst case (middle of list)
+
+For ArrayList<E>
+
+get(int index) is O(1) <--- main benefit of ArrayList<E>
+add(E element) is O(1) amortized, but O(n) worst-case since the array must be resized and copied
+add(int index, E element) is O(n) (with n/2 steps on average)
+remove(int index) is O(n) (with n/2 steps on average)
+Iterator.remove() is O(n) (with n/2 steps on average)
+ListIterator.add(E element) is O(n) (with n/2 steps on average)
