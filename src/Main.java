@@ -1,20 +1,17 @@
+import java.lang.reflect.Array;
+import java.util.*;
+
 public class Main {
 
-    private static void printData(){
+    private static void sortTest(){
         Generate gen = new Generate();
-        System.out.println(gen.getDataArrayList(0));
-        System.out.println(gen.getDataLinkedList(10000));
-    }
-    private static void TimeCalc(){
-        long startTime = System.currentTimeMillis();
-        printData();
-        long stopTime = System.currentTimeMillis();
-        long elapsedTime = stopTime - startTime;
-        System.out.println(elapsedTime + " Milliseconds");
+        ArrayList data = gen.getDataArrayList(10000);
+        Collections.sort(data);
+        System.out.println(data);
     }
 
     public static void main(String[] args) {
-    TimeCalc();
+    sortTest();
     }
 
 }

@@ -34,10 +34,10 @@ public class Generate extends Main {
 
     private String getDouble() {
         int rangeMin = 0;
-        int rangeMax = 100;
+        int rangeMax = 1000000;
         Random r = new Random();
         double randomValue = rangeMin + (rangeMax - rangeMin) * r.nextDouble();
-        NumberFormat format = new DecimalFormat("#0.00000");
+        NumberFormat format = new DecimalFormat("#0,00000");
         String formatedValue = format.format(randomValue);
         return formatedValue;
     }
