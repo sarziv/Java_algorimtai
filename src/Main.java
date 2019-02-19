@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class Main {
     /*
      *Prints generated data example
@@ -8,28 +6,30 @@ public class Main {
         Generate gen = new Generate();
         System.out.println(gen.getDataArrayList(10));
     }
+
     /*
-    * Static test for mergeSort
-    * */
+     * Static test for mergeSort
+     * */
     private static void test() {
         MergeInMemoryTest test = new MergeInMemoryTest();
         test.TestAssert();
     }
+
     /*
-    * MergeSort
-    * */
+     * MergeSort
+     * */
     private static void mergeSort(int size) {
-        MergeInMemory Mim = new MergeInMemory();
+        MergeInMemoryArray Mim = new MergeInMemoryArray();
         Mim.MergeInMemory(size);
     }
 
     public static void main(String[] args) {
         test();
         long startTime = System.currentTimeMillis();
-        mergeSort(10000000);
+        mergeSort(10);
         long stopTime = System.currentTimeMillis();
         long elapsedTime = stopTime - startTime;
-        System.out.println(elapsedTime+" Milliseconds.");
+        System.out.println(elapsedTime + " Milliseconds.");
     }
 
 }

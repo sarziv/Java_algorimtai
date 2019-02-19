@@ -1,4 +1,4 @@
-public class MergeInMemoryTest extends MergeInMemory {
+public class MergeInMemoryTest extends MergeInMemoryArray {
 
     public void TestAssert(){
         String[] a = {
