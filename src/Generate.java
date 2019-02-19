@@ -6,51 +6,59 @@ import java.text.NumberFormat;
 import java.util.Random;
 import java.util.*;
 
-public class Generate extends Main {
+public class Generate{
 
     private static final String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private static final int textSize = 4;
 
+    /*
+    * Generate random 4 letter @String
+    * from @chars
+    * return @String
+    * */
     private String getText() {
         StringBuffer text = new StringBuffer();
         for (int i = 0; i < textSize; i++) {
-            int number = getRandomNumber();
+            Random randomGenerator = new Random();
+            int number = randomGenerator.nextInt(chars.length());
             char ch = chars.charAt(number);
             text.append(ch);
         }
         return text.toString();
     }
-
-    private int getRandomNumber() {
-        int randomInt = 0;
-        Random randomGenerator = new Random();
-        randomInt = randomGenerator.nextInt(chars.length());
-        if (randomInt - 1 == -1) {
-            return randomInt;
-        } else {
-            return randomInt - 1;
-        }
-    }
-
+    /*
+    * Generate double with pattern of 0.00000
+    * Max value 10.00000
+    * return @String
+    * */
     private String getDouble() {
         int rangeMin = 0;
-        int rangeMax = 1000000;
+        int rangeMax = 10;
         Random r = new Random();
         double randomValue = rangeMin + (rangeMax - rangeMin) * r.nextDouble();
-        NumberFormat format = new DecimalFormat("#0,00000");
-        String formatedValue = format.format(randomValue);
-        return formatedValue;
+        NumberFormat format = new DecimalFormat("#0.00000");
+        return format.format(randomValue);
     }
-
+    /*
+    * Generate @String ArrayList
+    * Parameters @int size of array
+    * Return ArrayList
+    * */
     public ArrayList getDataArrayList(int size) {
+        System.out.println("Array List size of " + size + " was generated.");
         ArrayList<String> arr = new ArrayList<>();
         for (int i = 0; i < size; i++) {
             arr.add(getDouble() + getText());
         }
         return arr;
     }
-
+    /*
+     * Generate @String LinkedList
+     * Parameters @int size of List
+     * Return LinkedList
+     * */
     public LinkedList getDataLinkedList(int size) {
+        System.out.println("Linked List size of " + size + " was generated.");
         LinkedList<String> arr = new LinkedList<>();
         for (int i = 0; i < size; i++) {
             arr.add(getDouble() + getText());

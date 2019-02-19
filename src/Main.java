@@ -1,17 +1,31 @@
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class Main {
 
-    private static void sortTest(){
+    /*
+     *Prints generated data example
+     **/
+    private static void print() {
         Generate gen = new Generate();
-        ArrayList data = gen.getDataArrayList(10000);
-        Collections.sort(data);
-        System.out.println(data);
+        System.out.println(gen.getDataArrayList(10));
+    }
+    /*
+    * Static test
+    * */
+    private static void test() {
+        MergeInMemoryTest test = new MergeInMemoryTest();
+        test.TestAssert();
+    }
+    /*
+    * MergeSort*/
+    private static void mergeSort(int size) {
+        MergeInMemory Mim = new MergeInMemory();
+        Mim.MergeInMemory(size);
     }
 
     public static void main(String[] args) {
-    sortTest();
+        test();
+        mergeSort(1000000);
     }
 
 }
