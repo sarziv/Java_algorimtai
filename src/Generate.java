@@ -44,7 +44,7 @@ public class Generate {
     /*
      * Generate @String ArrayList
      * Parameters @int size of array
-     * Return ArrayList
+     * Return String[]
      * */
     public String[] getDataArrayList(int size) {
         System.out.println("Array size of " + size + " was generated.");

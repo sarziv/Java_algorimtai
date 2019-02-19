@@ -1,6 +1,4 @@
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 
 public class MergeInMemoryArray {
 
@@ -40,16 +38,19 @@ public class MergeInMemoryArray {
         }
     }
 
-    public void MergeInMemory(String[] Data) {
-
+    public static void main(String[] args) {
+        Generate gen = new Generate();
+        String[] Data = gen.getDataArrayList(30000);
         System.out.println(Arrays.toString(Data));
+        long startTime = System.currentTimeMillis();
         sort(Data);
+        long stopTime = System.currentTimeMillis();
+        long elapsedTime = stopTime - startTime;
+        System.out.println(elapsedTime + " Milliseconds.");
         //Data output if needed
         for (int j = 0; j < Data.length; j++) {
-            System.out.print(Data[j] + "\n");
+            System.out.print(Data[j] + " ");
         }
-
     }
-
 }
 
