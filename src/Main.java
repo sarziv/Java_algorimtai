@@ -18,15 +18,19 @@ public class Main {
     /*
      * MergeSort
      * */
-    private static void mergeSort(int size) {
-        MergeInMemoryArray Mim = new MergeInMemoryArray();
-        Mim.MergeInMemory(size);
+    private static void mergeSortArray(int size) {
+        MergeInMemoryArray Mima = new MergeInMemoryArray();
+        Mima.MergeInMemory(size);
+    }
+    private static void mergeSortLinked(int size) {
+        MergeInMemoryLinked Miml = new MergeInMemoryLinked();
+        Miml.test1(size);
     }
 
     public static void main(String[] args) {
         test();
         long startTime = System.currentTimeMillis();
-        mergeSort(10);
+        mergeSortLinked(10);
         long stopTime = System.currentTimeMillis();
         long elapsedTime = stopTime - startTime;
         System.out.println(elapsedTime + " Milliseconds.");
