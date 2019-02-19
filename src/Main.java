@@ -1,13 +1,5 @@
 public class Main {
     /*
-     *Prints generated data example
-     **/
-    private static void print() {
-        Generate gen = new Generate();
-        System.out.println(gen.getDataArrayList(10));
-    }
-
-    /*
      * Static test for mergeSort
      * */
     private static void test() {
@@ -16,12 +8,16 @@ public class Main {
     }
 
     /*
-     * MergeSort
+     * MergeSortArray
      * */
-    private static void mergeSortArray(int size) {
+    private static void mergeSortArray(String[] Data) {
         MergeInMemoryArray Mima = new MergeInMemoryArray();
-        Mima.MergeInMemory(size);
+        Mima.MergeInMemory(Data);
     }
+
+    /*
+     * MergeSortLinkedList
+     * */
     private static void mergeSortLinked(int size) {
         MergeInMemoryLinked Miml = new MergeInMemoryLinked();
         Miml.test1(size);
@@ -29,8 +25,10 @@ public class Main {
 
     public static void main(String[] args) {
         test();
+        Generate gen = new Generate();
+
         long startTime = System.currentTimeMillis();
-        mergeSortLinked(10);
+        mergeSortArray(gen.getDataArrayList(1000000));
         long stopTime = System.currentTimeMillis();
         long elapsedTime = stopTime - startTime;
         System.out.println(elapsedTime + " Milliseconds.");

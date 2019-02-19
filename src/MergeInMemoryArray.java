@@ -40,14 +40,13 @@ public class MergeInMemoryArray {
         }
     }
 
-    public void MergeInMemory(int size) {
-        Generate gen = new Generate();
-        String[] a = gen.getDataArrayList(size);
-        System.out.println(Arrays.toString(a));
-        sort(a);
+    public void MergeInMemory(String[] Data) {
+
+        System.out.println(Arrays.toString(Data));
+        sort(Data);
         //Data output if needed
-        for (int j = 0; j < a.length; j++) {
-            System.out.print(a[j] + "\n");
+        for (int j = 0; j < Data.length; j++) {
+            System.out.print(Data[j] + "\n");
         }
 
     }

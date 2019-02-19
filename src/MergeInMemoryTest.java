@@ -1,6 +1,6 @@
 public class MergeInMemoryTest extends MergeInMemoryArray {
 
-    public void TestAssert(){
+    public void TestAssert() {
         String[] a = {
                 "3.10113VGAL",
                 "0.66197JLRU",
@@ -23,9 +23,9 @@ public class MergeInMemoryTest extends MergeInMemoryArray {
                 "3.10113VGAL",
                 "9.34175HGGU"};
         for (int j = 0; j < a.length; j++) {
-            if(!a[j].equals(expectedArray[j])){
+            if (!a[j].equals(expectedArray[j])) {
                 System.out.println("Test Error\n");
-                System.out.println(a[j] +" and "+expectedArray[j] + " not equal");
+                System.out.println(a[j] + " and " + expectedArray[j] + " not equal");
                 System.exit(1);
             }
         }
