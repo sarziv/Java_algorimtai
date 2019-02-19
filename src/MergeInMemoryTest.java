@@ -29,6 +29,6 @@ public class MergeInMemoryTest extends MergeInMemory {
                 System.exit(1);
             }
         }
-        System.out.println("Test completed.");
+        System.out.println("Test successful.");
     }
 }

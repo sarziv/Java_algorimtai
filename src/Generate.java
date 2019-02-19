@@ -36,7 +36,7 @@ public class Generate{
         int rangeMax = 10;
         Random r = new Random();
         double randomValue = rangeMin + (rangeMax - rangeMin) * r.nextDouble();
-        NumberFormat format = new DecimalFormat("#0.00000");
+        NumberFormat format = new DecimalFormat("#0.0000");
         return format.format(randomValue);
     }
     /*

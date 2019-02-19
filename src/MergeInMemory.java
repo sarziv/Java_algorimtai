@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class MergeInMemory {
 
@@ -40,12 +41,15 @@ public class MergeInMemory {
 
     public void MergeInMemory(int size) {
         Generate gen = new Generate();
-        ArrayList<String> ArrayToString = gen.getDataArrayList(size);
-        String[] a = ArrayToString.toArray(new String[ArrayToString.size()]);
+        ArrayList<String> GenList = gen.getDataArrayList(size);
+        //LinkedList<String> GenList = gen.getDataLinkedList(size);
+        String[] a = GenList.toArray(new String[GenList.size()]);
         sort(a);
+        /*Data output if needed
         for (int j = 0; j < a.length; j++) {
             System.out.print(a[j] + "\n");
         }
+        */
     }
 
 }
